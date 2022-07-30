@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: data-app
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      config:
+        fail-fast: true
+        import-check:
+          enabled: false
+
+server:
+  port: 8082
+
+db:
+  url: ${postgres.db.url:NA}
+  username: ${postgres.db.username:NA}
+  password: ${postgres.db.password:NA}
+
+
